@@ -390,6 +390,118 @@
 	        .back-link:hover {
 	            background: var(--primary-dark);
 	        }
+			
+	        main {
+	            padding: 4rem 0;
+	        }
+
+	        .breadcrumb {
+	            color: var(--gray);
+	            margin-bottom: 2rem;
+	            font-size: 0.9rem;
+	        }
+
+	        .breadcrumb a {
+	            color: var(--primary);
+	            text-decoration: none;
+	        }
+
+	        .breadcrumb a:hover {
+	            text-decoration: underline;
+	        }
+
+	        h2 {
+	            font-size: 2rem;
+	            font-weight: 300;
+	            letter-spacing: -0.5px;
+	            margin-bottom: 1rem;
+	            padding-bottom: 0.5rem;
+	            border-bottom: 2px solid var(--primary);
+	            color: var(--primary);
+	        }
+
+	        .empty-state {
+	            text-align: center;
+	            padding: 4rem 2rem;
+	            color: var(--gray);
+	            background: var(--light-gray);
+	            border-radius: 8px;
+	            border: 1px solid #e0e0e0;
+	        }
+
+	        .empty-state .emoji {
+	            font-size: 4rem;
+	            margin-bottom: 1rem;
+	            opacity: 0.5;
+	        }
+
+	        .empty-state h3 {
+	            font-size: 1.5rem;
+	            font-weight: 300;
+	            margin-bottom: 0.5rem;
+	            color: var(--black);
+	        }
+
+	        .file-list {
+	            list-style: none;
+	            margin-top: 2rem;
+	        }
+
+	        .file-list li {
+	            padding: 1rem;
+	            border-bottom: 1px solid #e0e0e0;
+	        }
+
+	        .file-list li:last-child {
+	            border-bottom: none;
+	        }
+
+	        .file-list a {
+	            color: var(--primary);
+	            text-decoration: none;
+	            font-weight: 500;
+	            display: flex;
+	            align-items: center;
+	            gap: 0.5rem;
+	        }
+
+	        .file-list a:hover {
+	            text-decoration: underline;
+	        }
+
+	        .back-link {
+	            display: inline-block;
+	            color: var(--white);
+	            background: var(--primary);
+	            text-decoration: none;
+	            margin-top: 2rem;
+	            padding: 0.5rem 1.5rem;
+	            border-radius: 4px;
+	            transition: background 0.3s;
+	            font-weight: 500;
+	        }
+
+	        .back-link:hover {
+	            background: var(--primary-dark);
+	        }
+
+	        @media (max-width: 768px) {
+	            body {
+	                padding-top: 60px;
+	            }
+
+	            header {
+	                padding: 0.75rem 0;
+	            }
+
+	            .logo {
+	                font-size: 1.2rem;
+	            }
+
+	            .nav-links {
+	                display: none;
+	            }
+	        }
         }
     </style>
 </head>
@@ -432,7 +544,7 @@
             </ul>
             -->
 
-            <a href="../" class="back-link">← Back to Home</a>
+            <a href="../" class="btn">← Back to Home</a>
         </div>
     </main>
 
