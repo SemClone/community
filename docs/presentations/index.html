@@ -27,45 +27,52 @@
         }
 
         header {
+            background: var(--primary);
+            color: #fff;
+            padding: 1.125rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: var(--primary);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
-            padding: 1.125rem 0;
         }
 
-        header .container {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        header h1 {
+        .logo {
             font-size: 1.75rem;
             font-weight: 300;
             letter-spacing: -0.5px;
-            color: #fff;
         }
 
-        header h1 strong {
+        .logo strong {
             font-weight: 700;
-            color: #fff;
         }
 
-        header a {
+        .logo a {
             color: #fff;
             text-decoration: none;
         }
 
-        nav a {
-            font-weight: 400;
-            transition: opacity 0.3s;
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
         }
 
-        nav a:hover {
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 400;
+        }
+
+        .nav-links a:hover {
             opacity: 0.8;
         }
 
@@ -172,12 +179,17 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1><a href="../"><strong>SEMCL.ONE</strong> Community</a></h1>
-            <nav>
-                <a href="../">Home</a>
-            </nav>
-        </div>
+        <nav class="container">
+            <div class="logo">
+                <a href="../"><strong>SEMCL.ONE</strong> Community</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../user_guides/">User Guides</a></li>
+                <li><a href="../presentations/">Presentations</a></li>
+                <li><a href="../examples/">Examples</a></li>
+                <li><a href="https://github.com/SemClone/community">GitHub</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
