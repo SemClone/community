@@ -4,18 +4,24 @@ Community documentation and resources for SEMCL.ONE.
 
 ## 📁 Structure
 
-- **user_guides/** - Comprehensive user guides and documentation
-- **presentations/** - Slide decks and presentations
-- **examples/** - Practical examples and sample code
+```
+community/
+├── docs/                  # Website files
+│   ├── index.html        # Main homepage
+│   ├── user_guides/      # User guides and documentation
+│   ├── presentations/    # Slide decks and presentations
+│   └── examples/         # Practical examples and sample code
+└── README.md
+```
 
 ## 🚀 Getting Started
 
 ### Local Development
 
-Simply open `index.html` in your browser to view the site locally:
+Simply open `docs/index.html` in your browser to view the site locally:
 
 ```bash
-open index.html
+open docs/index.html
 ```
 
 ### Hosting
@@ -30,22 +36,22 @@ This is a static site that can be hosted on:
 
 1. Push this repository to GitHub
 2. Go to Settings > Pages
-3. Select the branch (usually `main`) and root folder
+3. Select the branch (usually `main`) and **`/docs` folder**
 4. Your site will be available at `https://[username].github.io/community/`
 
 ## 📝 Adding Content
 
 ### User Guides
 
-Add HTML files to the `user_guides/` folder. They will automatically be accessible via `user_guides/your-guide.html`.
+Add HTML files to the `docs/user_guides/` folder. They will automatically be accessible via `user_guides/your-guide.html`.
 
 ### Presentations
 
-Add HTML presentation files to the `presentations/` folder (e.g., reveal.js presentations).
+Add HTML presentation files to the `docs/presentations/` folder (e.g., reveal.js presentations).
 
 ### Examples
 
-Add example files to the `examples/` folder.
+Add example files to the `docs/examples/` folder.
 
 ## 🎨 Design
 
