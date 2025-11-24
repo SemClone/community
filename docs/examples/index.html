@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         :root {
             --primary: #9B0002;
             --primary-dark: #7A0001;
@@ -22,25 +22,25 @@
             --success: #0A6E0A;
             --warning: #B85C00;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: var(--black);
             background: var(--white);
-            padding-top: 68px;
+            padding-top: 68px; /* 75% of 90px for reduced header height */
         }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
+        
         header {
             background: var(--primary);
             color: var(--white);
-            padding: 1.125rem 0;
+            padding: 1.125rem 0; /* 75% of 1.5rem */
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: fixed;
             top: 0;
@@ -48,26 +48,33 @@
             right: 0;
             z-index: 1000;
         }
-
+        
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .logo {
             font-size: 1.75rem;
             font-weight: 300;
             letter-spacing: -0.5px;
         }
-
+        
         .logo strong {
             font-weight: 700;
         }
 
         .logo a {
-            color: var(--white);
+            display: block;
             text-decoration: none;
+        }
+
+        .navbar-logo {
+            height: 36px;
+            width: auto;
+            display: block;
+            filter: brightness(0) invert(1); /* Make logo white for dark navbar */
         }
 
         .nav-links {
@@ -75,128 +82,435 @@
             gap: 2.5rem;
             list-style: none;
         }
-
+        
         .nav-links a {
             color: var(--white);
             text-decoration: none;
             transition: opacity 0.3s;
             font-weight: 400;
         }
-
+        
         .nav-links a:hover {
             opacity: 0.8;
         }
 
-        main {
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        
+        h1 strong {
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+        
+        section {
             padding: 4rem 0;
         }
-
-        .breadcrumb {
-            color: var(--gray);
-            margin-bottom: 2rem;
-            font-size: 0.9rem;
+        
+        h2 {
+            font-size: 2.25rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+        
+        h2 strong {
+            font-weight: 700;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        .feature-section {
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            padding: 2rem;
+        }
+        
+        .feature-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .feature-section.available h3 {
+            color: var(--success);
+            border-color: var(--success);
+        }
+        
+        .feature-section.development h3 {
+            color: var(--warning);
+            border-color: var(--warning);
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list strong {
+            color: var(--black);
+            font-weight: 600;
         }
 
-        .breadcrumb a {
-            color: var(--primary);
+        .feature-list a {
+            color: var(--gray);
             text-decoration: none;
         }
 
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: 300;
-            letter-spacing: -0.5px;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: var(--gray);
-            background: var(--light-gray);
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-        }
-
-        .empty-state .emoji {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            opacity: 0.5;
-        }
-
-        .empty-state h3 {
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-bottom: 0.5rem;
+        .feature-list a:hover {
             color: var(--black);
         }
 
-        .file-list {
-            list-style: none;
-            margin-top: 2rem;
+        .feature-list span {
+            color: var(--gray);
+            display: block;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
         }
-
-        .file-list li {
-            padding: 1rem;
-            border-bottom: 1px solid #e0e0e0;
+        
+        .components-section {
+            background: var(--light-gray);
         }
-
-        .file-list li:last-child {
-            border-bottom: none;
+        
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
         }
-
-        .file-list a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
+        
+        .component-card {
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            padding: 1.5rem;
+            transition: box-shadow 0.3s;
+        }
+        
+        .component-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .component-header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 0.5rem;
+            margin-bottom: 1rem;
         }
-
-        .file-list a:hover {
-            text-decoration: underline;
+        
+        .component-name {
+            font-weight: 600;
+            color: var(--black);
+            font-size: 1.125rem;
         }
-
-        .back-link {
-            display: inline-block;
+        
+        .component-status {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .status-ready {
+            background: var(--success);
             color: var(--white);
+        }
+        
+        .status-development {
+            background: var(--warning);
+            color: var(--white);
+        }
+        
+        .component-desc {
+            color: var(--gray);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .component-meta {
+            font-size: 0.75rem;
+            color: var(--gray);
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .component-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .component-links a {
+            color: var(--primary);
+            text-decoration: underline;
+            font-size: 0.875rem;
+            text-underline-offset: 2px;
+        }
+        
+        .component-links a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .cta {
+            text-align: center;
+            padding: 4rem 0;
+            background: var(--white);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
             background: var(--primary);
+            color: var(--white);
             text-decoration: none;
-            margin-top: 2rem;
-            padding: 0.5rem 1.5rem;
-            border-radius: 4px;
-            transition: background 0.3s;
             font-weight: 500;
+            transition: background 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.875rem;
         }
 
-        .back-link:hover {
+        .component-card .btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .btn:hover {
             background: var(--primary-dark);
         }
-
+        
+        footer {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.875rem;
+        }
+        
+        footer a {
+            color: var(--white);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        
         @media (max-width: 768px) {
             body {
-                padding-top: 60px;
+                padding-top: 60px; /* 75% of 80px for mobile */
             }
 
             header {
-                padding: 0.75rem 0;
+                padding: 0.75rem 0; /* 75% of 1rem for mobile */
             }
 
-            .logo {
-                font-size: 1.2rem;
+            .navbar-logo {
+                height: 30px; /* Slightly smaller on mobile */
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
             }
 
             .nav-links {
                 display: none;
             }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+			
+	        .back-link {
+	            display: inline-block;
+	            color: var(--white);
+	            background: var(--primary);
+	            text-decoration: none;
+	            margin-top: 2rem;
+	            padding: 0.5rem 1.5rem;
+	            border-radius: 4px;
+	            transition: background 0.3s;
+	            font-weight: 500;
+	        }
+
+	        .back-link:hover {
+	            background: var(--primary-dark);
+	        }
+			
+	        main {
+	            padding: 4rem 0;
+	        }
+
+	        .breadcrumb {
+	            color: var(--gray);
+	            margin-bottom: 2rem;
+	            font-size: 0.9rem;
+	        }
+
+	        .breadcrumb a {
+	            color: var(--primary);
+	            text-decoration: none;
+	        }
+
+	        .breadcrumb a:hover {
+	            text-decoration: underline;
+	        }
+
+	        h2 {
+	            font-size: 2rem;
+	            font-weight: 300;
+	            letter-spacing: -0.5px;
+	            margin-bottom: 1rem;
+	            padding-bottom: 0.5rem;
+	            border-bottom: 2px solid var(--primary);
+	            color: var(--primary);
+	        }
+
+	        .empty-state {
+	            text-align: center;
+	            padding: 4rem 2rem;
+	            color: var(--gray);
+	            background: var(--light-gray);
+	            border-radius: 8px;
+	            border: 1px solid #e0e0e0;
+	        }
+
+	        .empty-state .emoji {
+	            font-size: 4rem;
+	            margin-bottom: 1rem;
+	            opacity: 0.5;
+	        }
+
+	        .empty-state h3 {
+	            font-size: 1.5rem;
+	            font-weight: 300;
+	            margin-bottom: 0.5rem;
+	            color: var(--black);
+	        }
+
+	        .file-list {
+	            list-style: none;
+	            margin-top: 2rem;
+	        }
+
+	        .file-list li {
+	            padding: 1rem;
+	            border-bottom: 1px solid #e0e0e0;
+	        }
+
+	        .file-list li:last-child {
+	            border-bottom: none;
+	        }
+
+	        .file-list a {
+	            color: var(--primary);
+	            text-decoration: none;
+	            font-weight: 500;
+	            display: flex;
+	            align-items: center;
+	            gap: 0.5rem;
+	        }
+
+	        .file-list a:hover {
+	            text-decoration: underline;
+	        }
+
+	        .back-link {
+	            display: inline-block;
+	            color: var(--white);
+	            background: var(--primary);
+	            text-decoration: none;
+	            margin-top: 2rem;
+	            padding: 0.5rem 1.5rem;
+	            border-radius: 4px;
+	            transition: background 0.3s;
+	            font-weight: 500;
+	        }
+
+	        .back-link:hover {
+	            background: var(--primary-dark);
+	        }
+
+	        @media (max-width: 768px) {
+	            body {
+	                padding-top: 60px;
+	            }
+
+	            header {
+	                padding: 0.75rem 0;
+	            }
+
+	            .logo {
+	                font-size: 1.2rem;
+	            }
+
+	            .nav-links {
+	                display: none;
+	            }
+	        }
         }
     </style>
 </head>
@@ -204,40 +518,67 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <a href="../"><strong>SEMCL.ONE</strong> Community</a>
+                <a href="/">
+                    <img src="https://semcl.one/imgs/grayscale_transparent_nobuffer.png" alt="SEMCL.ONE" class="navbar-logo"> 
+                </a>
             </div>
             <ul class="nav-links">
-                <li><a href="../user_guides/">User Guides</a></li>
-                <li><a href="../presentations/">Presentations</a></li>
-                <li><a href="../examples/">Examples</a></li>
-                <li><a href="https://github.com/SemClone/community">GitHub</a></li>
+				<li><a href="https://semcl.one/">Home</a></li>
+                <li><a href="https://semcl.one/">News</a></li>
+                <li><a href="https://community.semcl.one/">Community</a></li>
+                <li><a href="https://github.com/SemClone/" target="_blank">GitHub</a></li>
+				<li><a href="https://semcl.one/">About</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <div class="container">
-            <nav class="breadcrumb">
-                <a href="../">Home</a> / Examples
-            </nav>
-
-            <h2>Examples</h2>
-
-            <div class="empty-state">
-                <h3>No examples yet</h3>
-                <p>Practical examples will appear here once they're added to this folder.</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">Add HTML files or code examples to the <code>examples/</code> directory to get started.</p>
+	
+    <section id="features" class="container">
+		<br/>
+        <h2><strong>Examples</strong></h2>
+        <div class="feature-grid">
+            <div class="feature-section available">
+                <h3>MCP Configuration Options</h3>
+                <ul class="feature-list">
+                    <li>
+                        &bull; <strong><a href="#">Introduction to MCP-SEMCLONE</a></strong>
+                        <span>User guide on using AI-Driven OSS Compliance Tooling through SEMCL.ONE MCP server.</span>
+                    </li>
+                    <li>
+                        <strong><a href="#">COPYCATM for detecting GenAI contamination</a></strong>
+                        <span>CopyCatM is the next paradigm on plagiarism and IP contamination tooling using Algorithm based patterns.</span>
+                    </li>
+                </ul>
             </div>
-
-            <!-- When you add examples, uncomment and populate this section:
-            <ul class="file-list">
-                <li><a href="basic-usage.html">Basic Usage Example</a></li>
-                <li><a href="advanced-integration.html">Advanced Integration</a></li>
-            </ul>
-            -->
-
-            <a href="../" class="back-link">← Back to Home</a>
+			
+            <div class="feature-section available">
+                <h3>Technical Architecture</h3>
+                <ul class="feature-list">
+                    <li>
+                        &bull; <strong><a href="#">Introduction to MCP-SEMCLONE</a></strong>
+                        <span>User guide on using AI-Driven OSS Compliance Tooling through SEMCL.ONE MCP server.</span>
+                    </li>
+                    <li>
+                        <strong><a href="#">COPYCATM for detecting GenAI contamination</a></strong>
+                        <span>CopyCatM is the next paradigm on plagiarism and IP contamination tooling using Algorithm based patterns.</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </main>
+    </section>
+	
+    <section class="cta">
+        <div class="container">
+            <a href="/" class="btn">
+                ← Back to Home
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SEMCL.ONE | <a href="https://semcl.one">semcl.one</a></p>
+        </div>
+    </footer>
 </body>
 </html>
