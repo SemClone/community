@@ -31,18 +31,17 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 68px;
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            background: var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            padding: 1.125rem 20px;
         }
 
         header h1 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 300;
             letter-spacing: -0.5px;
             color: #fff;
@@ -58,8 +57,17 @@
             text-decoration: none;
         }
 
+        nav a {
+            font-weight: 400;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
         main {
-            margin-top: 68px;
+            margin-top: 72px;
             padding: 4rem 20px;
         }
 
@@ -162,6 +170,9 @@
 <body>
     <header>
         <h1><a href="../"><strong>SEMCL.ONE</strong> Community</a></h1>
+        <nav>
+            <a href="../">Home</a>
+        </nav>
     </header>
 
     <main>
