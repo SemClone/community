@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         :root {
             --primary: #9B0002;
             --primary-dark: #7A0001;
@@ -22,25 +22,25 @@
             --success: #0A6E0A;
             --warning: #B85C00;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: var(--black);
             background: var(--white);
-            padding-top: 68px;
+            padding-top: 68px; /* 75% of 90px for reduced header height */
         }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
+        
         header {
             background: var(--primary);
             color: var(--white);
-            padding: 1.125rem 0;
+            padding: 1.125rem 0; /* 75% of 1.5rem */
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: fixed;
             top: 0;
@@ -48,26 +48,33 @@
             right: 0;
             z-index: 1000;
         }
-
+        
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .logo {
             font-size: 1.75rem;
             font-weight: 300;
             letter-spacing: -0.5px;
         }
-
+        
         .logo strong {
             font-weight: 700;
         }
 
         .logo a {
-            color: var(--white);
+            display: block;
             text-decoration: none;
+        }
+
+        .navbar-logo {
+            height: 36px;
+            width: auto;
+            display: block;
+            filter: brightness(0) invert(1); /* Make logo white for dark navbar */
         }
 
         .nav-links {
@@ -75,14 +82,14 @@
             gap: 2.5rem;
             list-style: none;
         }
-
+        
         .nav-links a {
             color: var(--white);
             text-decoration: none;
             transition: opacity 0.3s;
             font-weight: 400;
         }
-
+        
         .nav-links a:hover {
             opacity: 0.8;
         }
@@ -93,93 +100,232 @@
             padding: 5rem 0;
             text-align: center;
         }
-
-        .hero h2 {
-            font-size: 2.5rem;
+        
+        h1 {
+            font-size: 3rem;
             font-weight: 300;
-            letter-spacing: -1px;
             margin-bottom: 1rem;
+            letter-spacing: -1px;
         }
-
-        .hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
+        
+        h1 strong {
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
             margin: 0 auto;
         }
-
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+        
         section {
             padding: 4rem 0;
         }
-
-        .section h3 {
-            font-size: 1.8rem;
+        
+        h2 {
+            font-size: 2.25rem;
             font-weight: 300;
-            letter-spacing: -0.5px;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary);
-            display: inline-block;
+            margin-bottom: 3rem;
             color: var(--primary);
+            text-align: center;
+            letter-spacing: -0.5px;
         }
-
-        .section p {
-            color: var(--gray);
-            margin-bottom: 2rem;
+        
+        h2 strong {
+            font-weight: 700;
         }
-
-        .grid {
+        
+        .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
         }
-
-        .card {
+        
+        .feature-section {
             background: var(--white);
             border: 1px solid #e0e0e0;
-            border-radius: 8px;
             padding: 2rem;
+        }
+        
+        .feature-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .feature-section.available h3 {
+            color: var(--success);
+            border-color: var(--success);
+        }
+        
+        .feature-section.development h3 {
+            color: var(--warning);
+            border-color: var(--warning);
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list strong {
+            color: var(--black);
+            font-weight: 600;
+        }
+        
+        .feature-list span {
+            color: var(--gray);
+            display: block;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+        
+        .components-section {
+            background: var(--light-gray);
+        }
+        
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .component-card {
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            padding: 1.5rem;
             transition: box-shadow 0.3s;
         }
-
-        .card:hover {
+        
+        .component-card:hover {
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
-        .card h4 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--black);
+        
+        .component-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 1rem;
         }
-
-        .card .emoji {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .card p {
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
-
-        .card a {
-            display: inline-block;
-            color: var(--white);
-            background: var(--primary);
-            text-decoration: none;
+        
+        .component-name {
             font-weight: 600;
-            padding: 0.5rem 1.5rem;
-            border-radius: 4px;
-            transition: background 0.3s;
+            color: var(--black);
+            font-size: 1.125rem;
         }
-
-        .card a:hover {
+        
+        .component-status {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .status-ready {
+            background: var(--success);
+            color: var(--white);
+        }
+        
+        .status-development {
+            background: var(--warning);
+            color: var(--white);
+        }
+        
+        .component-desc {
+            color: var(--gray);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .component-meta {
+            font-size: 0.75rem;
+            color: var(--gray);
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .component-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .component-links a {
+            color: var(--primary);
+            text-decoration: underline;
+            font-size: 0.875rem;
+            text-underline-offset: 2px;
+        }
+        
+        .component-links a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .cta {
+            text-align: center;
+            padding: 4rem 0;
+            background: var(--white);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.875rem;
+        }
+        
+        .btn:hover {
             background: var(--primary-dark);
         }
-
+        
         footer {
             background: var(--black);
             color: var(--white);
@@ -187,40 +333,40 @@
             padding: 2rem 0;
             font-size: 0.875rem;
         }
-
+        
         footer a {
             color: var(--white);
             text-decoration: underline;
             text-underline-offset: 2px;
         }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
+        
         @media (max-width: 768px) {
             body {
-                padding-top: 60px;
+                padding-top: 60px; /* 75% of 80px for mobile */
             }
 
             header {
-                padding: 0.75rem 0;
+                padding: 0.75rem 0; /* 75% of 1rem for mobile */
             }
 
-            .hero h2 {
+            .navbar-logo {
+                height: 30px; /* Slightly smaller on mobile */
+            }
+
+            h1 {
                 font-size: 2rem;
             }
 
-            .grid {
-                grid-template-columns: 1fr;
-            }
-
-            .logo {
-                font-size: 1.2rem;
+            h2 {
+                font-size: 1.75rem;
             }
 
             .nav-links {
                 display: none;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
