@@ -11,6 +11,10 @@ sections:
       - title: OSSLiLi - License and Copyright extraction
         url: "https://github.com/SemClone/osslili/blob/main/docs/USAGE.md"
         description: Instructions for using the osslili package to identify licenses and extract copyright information from local source code.
+		
+      - title: OSPAC (Open Source Policy as Code) policy engine
+        url: "https://github.com/SemClone/ospac/blob/main/docs/USER_GUIDE.md"
+        description: Declarative, data-driven approach where all compliance logic, rules, and decisions are defined in versionable policy files rather than hardcoded in application logic.
 
   - title: Technical Architecture
     status: available  # Options: available, development
