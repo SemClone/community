@@ -25,6 +25,8 @@ exclude:
   - .git
   - .gitignore
   - .claude
+  - "*.bak"
+  - JEKYLL_GUIDE.md
 
 # Include files
 include:
@@ -34,10 +36,10 @@ include:
 collections:
   examples:
     output: true
-    permalink: /docs/examples/:name/
+    permalink: /examples/:name/
   user_guides:
     output: true
-    permalink: /docs/user_guides/:name/
+    permalink: /user_guides/:name/
 
 # Defaults
 defaults:
@@ -52,7 +54,7 @@ defaults:
       layout: "article"
       show_breadcrumb: true
       breadcrumb_parent: Examples
-      breadcrumb_parent_url: /docs/examples/
+      breadcrumb_parent_url: /examples/
   - scope:
       path: ""
       type: "user_guides"
@@ -60,7 +62,7 @@ defaults:
       layout: "article"
       show_breadcrumb: true
       breadcrumb_parent: User Guides
-      breadcrumb_parent_url: /docs/user_guides/
+      breadcrumb_parent_url: /user_guides/
 
 # Site navigation
 navigation:
