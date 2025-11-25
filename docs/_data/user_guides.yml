@@ -15,10 +15,10 @@ sections:
   - title: Technical Architecture
     status: available  # Options: available, development
     items:
-      - title: Introduction to MCP-SEMCLONEss
-        url: "https://github.com/SemClone/binarysniffer/blob/main/docs/USER_GUIDE.md"
-        description: A user guide on using AI-driven OSS compliance tooling through the SEMCL.ONE MCP server.
+      - title: SPDX License Data Management
+        url: "https://github.com/SemClone/osslili/blob/main/docs/SPDX.md"
+        description: This document describes how to update the bundled SPDX license data used by osslili for license detection, which is used by all other products.
 
-      - title: CopyCatM for detecting GenAI contamination
-        url: "#"
-        description: CopyCatM represents a new paradigm in plagiarism and IP contamination detection using algorithm-based patterns.
+      - title: BinarySniffer Signature Management
+        url: "https://github.com/SemClone/binarysniffer/blob/main/docs/SIGNATURE_MANAGEMENT.md"
+        description: How to create, update, and manage signature databases for the BinarySniffer.
