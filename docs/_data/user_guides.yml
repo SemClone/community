@@ -15,7 +15,7 @@ sections:
   - title: Technical Architecture
     status: available  # Options: available, development
     items:
-      - title: Introduction to MCP-SEMCLONE
+      - title: Introduction to MCP-SEMCLONEss
         url: "#"
         description: A user guide on using AI-driven OSS compliance tooling through the SEMCL.ONE MCP server.
 
