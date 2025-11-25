@@ -4,11 +4,11 @@ sections:
   - title: User Products
     status: available  # Options: available, development
     items:
-      - title: BinarySniffer User Guide
+      - title: BinarySniffer - Binary Static Analysis
         url: "https://github.com/SemClone/binarysniffer/blob/main/docs/USER_GUIDE.md"
         description: BinarySniffer is a high-performance CLI tool for detecting open source components in binary files. It can analyze executables, shared libraries, APK files, and other binary formats to identify embedded binary blobs.
 
-      - title: OSSLiLi
+      - title: OSSLiLi - License and Copyright extraction
         url: "https://github.com/SemClone/osslili/blob/main/docs/USAGE.md"
         description: Instructions for using the osslili package to identify licenses and extract copyright information from local source code.
 
