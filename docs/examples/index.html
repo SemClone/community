@@ -6,27 +6,26 @@ show_breadcrumb: true
 breadcrumb: Examples
 ---
 
-<section id="features">
-    <h2><strong>Examples</strong></h2>
-    {% if site.examples.size > 0 %}
-    <div class="feature-grid">
-        <div class="feature-section available">
-            <h3>Available Examples</h3>
-            <ul class="feature-list">
-                {% for example in site.examples %}
-                <li>
-                    <strong><a href="{{ example.url | relative_url }}">{{ example.title }}</a></strong>
-                    <span>{{ example.description | default: example.excerpt | strip_html | truncatewords: 20 }}</span>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+<h2><strong>Examples</strong></h2>
+
+{% if site.examples.size > 0 %}
+<div class="feature-grid">
+    <div class="feature-section available">
+        <h3>Available Examples</h3>
+        <ul class="feature-list">
+            {% for example in site.examples %}
+            <li>
+                <strong><a href="{{ example.url | relative_url }}">{{ example.title }}</a></strong>
+                <span>{{ example.description | default: example.excerpt | strip_html | truncatewords: 20 }}</span>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
-    {% else %}
-    <div class="empty-state">
-        <div class="emoji">📝</div>
-        <h3>No Examples Yet</h3>
-        <p>Add example markdown files to the _examples folder to get started.</p>
-    </div>
-    {% endif %}
-</section>
+</div>
+{% else %}
+<div class="empty-state">
+    <div class="emoji">📝</div>
+    <h3>No Examples Yet</h3>
+    <p>Add example markdown files to the _examples folder to get started.</p>
+</div>
+{% endif %}

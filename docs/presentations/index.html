@@ -6,22 +6,21 @@ show_breadcrumb: true
 breadcrumb: Presentations
 ---
 
-<section id="features">
-    <h2><strong>Presentations</strong></h2>
-    <div class="feature-grid">
-        {% for section in site.data.presentations.sections %}
-        <div class="feature-section {{ section.status }}">
-            <h3>{{ section.title }}</h3>
-            <ul class="feature-list">
-                {% for item in section.items %}
-                <li>
-                    {% if forloop.first %}&bull; {% endif %}
-                    <strong><a href="{{ item.url }}"{% if item.url contains 'http' %} target="_blank"{% endif %}>{{ item.title }}</a></strong>
-                    <span>{{ item.description }}</span>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endfor %}
+<h2><strong>Presentations</strong></h2>
+
+<div class="feature-grid">
+    {% for section in site.data.presentations.sections %}
+    <div class="feature-section {{ section.status }}">
+        <h3>{{ section.title }}</h3>
+        <ul class="feature-list">
+            {% for item in section.items %}
+            <li>
+                {% if forloop.first %}&bull; {% endif %}
+                <strong><a href="{{ item.url }}"{% if item.url contains 'http' %} target="_blank"{% endif %}>{{ item.title }}</a></strong>
+                <span>{{ item.description }}</span>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
-</section>
+    {% endfor %}
+</div>

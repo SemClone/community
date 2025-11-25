@@ -27,7 +27,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 header {
@@ -97,6 +97,10 @@ nav {
 .components-section {
     background: var(--light-gray);
     padding: 4rem 0;
+}
+
+.components-container {
+    padding: 20px;
 }
 
 .cta {
