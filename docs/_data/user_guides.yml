@@ -22,3 +22,7 @@ sections:
       - title: BinarySniffer Signature Management
         url: "https://github.com/SemClone/binarysniffer/blob/main/docs/SIGNATURE_MANAGEMENT.md"
         description: How to create, update, and manage signature databases for the BinarySniffer.
+
+      - title: OSPAC LLM Prompts for SPDX Licenses
+        url: "https://github.com/SemClone/ospac/blob/main/docs/LLM_PROMPTS.md"
+        description: AI prompts OSPAC uses to analyze software licenses and extract structured data.
