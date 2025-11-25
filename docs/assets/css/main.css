@@ -94,6 +94,17 @@ nav {
     text-align: center;
 }
 
+.components-section {
+    background: var(--light-gray);
+    padding: 4rem 0;
+}
+
+.cta {
+    text-align: center;
+    padding: 4rem 0;
+    background: var(--white);
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 300;
@@ -218,10 +229,6 @@ h2 strong {
     margin-top: 0.25rem;
 }
 
-.components-section {
-    background: var(--light-gray);
-}
-
 .component-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -299,12 +306,6 @@ h2 strong {
 
 .component-links a:hover {
     color: var(--primary-dark);
-}
-
-.cta {
-    text-align: center;
-    padding: 4rem 0;
-    background: var(--white);
 }
 
 .btn {
