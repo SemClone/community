@@ -6,8 +6,6 @@ author: SEMCL.ONE Team
 tags: [getting-started, mcp, setup]
 ---
 
-# Getting Started with MCP-SEMCLONE
-
 Welcome to MCP-SEMCLONE! This guide will help you get up and running quickly.
 
 ## What is MCP-SEMCLONE?

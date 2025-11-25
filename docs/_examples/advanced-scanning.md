@@ -6,8 +6,6 @@ author: SEMCL.ONE Team
 tags: [advanced, scanning, configuration]
 ---
 
-# Advanced Scanning Techniques
-
 This guide covers advanced scanning techniques and configuration options for power users.
 
 ## Custom Scan Rules

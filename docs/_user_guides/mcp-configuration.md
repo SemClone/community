@@ -6,8 +6,6 @@ author: SEMCL.ONE Team
 tags: [mcp, configuration, setup]
 ---
 
-# MCP Configuration Guide
-
 This guide provides comprehensive information on configuring the Model Context Protocol (MCP) for SEMCL.ONE.
 
 ## Overview
