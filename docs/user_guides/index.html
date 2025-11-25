@@ -15,7 +15,6 @@ breadcrumb: User Guides
         <ul class="feature-list">
             {% for guide in site.user_guides %}
             <li>
-                {% if forloop.first %}&bull; {% endif %}
                 <strong><a href="{{ guide.url | relative_url }}">{{ guide.title }}</a></strong>
                 <span>{{ guide.description | default: guide.excerpt | strip_html | truncatewords: 20 }}</span>
             </li>
@@ -33,7 +32,6 @@ breadcrumb: User Guides
         <ul class="feature-list">
             {% for item in section.items %}
             <li>
-                {% if forloop.first %}&bull; {% endif %}
                 <strong><a href="{{ item.url }}">{{ item.title }}</a></strong>
                 <span>{{ item.description }}</span>
             </li>
