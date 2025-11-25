@@ -1,5 +1,5 @@
 ---
-title: IDE Integration Guide
+title: MCP SEMCL.ONE IDE Integration Guide
 description: Integrate the SEMCL.ONE MCP server with popular AI-powered IDEs for seamless OSS compliance analysis
 date: 2025-11-24
 author: SEMCL.ONE Team
@@ -12,9 +12,9 @@ This guide explains how to integrate the SEMCL.ONE MCP server with popular AI-po
 
 The SEMCL.ONE MCP server works with any IDE that supports the Model Context Protocol (MCP):
 
-- [**Cursor IDE**](#cursor-ide-integration) - AI-first code editor
-- [**Cline**](#cline-integration) - AI coding extension for VS Code
-- [**Kiro IDE**](#kiro-ide-integration) - Amazon's agentic AI IDE (launched July 2025)
+- [**Cursor IDE**](#cursor-ide-integration)
+- [**Cline**](#cline-integration)
+- [**Kiro IDE**](#kiro-ide-integration)
 - [**VS Code**](#vs-code-integration) (with MCP extensions)
 - [**JetBrains IDEs**](#jetbrains-ides-integration) (with AI plugin + MCP support)
 
