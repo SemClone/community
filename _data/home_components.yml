@@ -1,0 +1,21 @@
+# Home page component cards - Edit this file to add/remove/update the cards on the home page
+
+- name: Presentations
+  description: Slide decks and presentations covering concepts, architecture, and use cases.
+  url: presentations/
+  button_text: View Presentations →
+  show_progress: true
+  progress: 0
+
+- name: User Guides
+  description: Comprehensive guides to help you understand and use SEMCL.ONE features effectively.
+  url: user_guides/
+  button_text: Browse Guides →
+  show_progress: false
+
+- name: Examples
+  description: Practical examples and sample implementations to help you get started quickly.
+  url: examples/
+  button_text: Explore Examples →
+  show_progress: true
+  progress: 100

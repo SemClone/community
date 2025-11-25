@@ -1,0 +1,9 @@
+{% if page.back_button %}
+<section class="cta">
+    <div class="container">
+        <a href="{{ page.back_button.url }}" class="btn">
+            ← {{ page.back_button.text }}
+        </a>
+    </div>
+</section>
+{% endif %}

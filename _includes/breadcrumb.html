@@ -1,0 +1,17 @@
+{% if page.show_breadcrumb %}
+<div class="breadcrumb">
+    <a href="/docs/">Community</a>
+    {% if page.breadcrumb_parent %}
+        <span> / </span>
+        {% if page.breadcrumb_parent_url %}
+            <a href="{{ page.breadcrumb_parent_url }}">{{ page.breadcrumb_parent }}</a>
+        {% else %}
+            <span>{{ page.breadcrumb_parent }}</span>
+        {% endif %}
+    {% endif %}
+    {% if page.breadcrumb %}
+        <span> / </span>
+        <span>{{ page.breadcrumb }}</span>
+    {% endif %}
+</div>
+{% endif %}

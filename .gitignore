@@ -11,3 +11,13 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
+# Backup files
+*.bak

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<main>
+    <div class="container">
+        {% include breadcrumb.html %}
+
+        <article class="article-content">
+            <header class="article-header">
+                <h1>{{ page.title }}</h1>
+                {% if page.date %}
+                <p class="article-meta">
+                    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+                    {% if page.author %} • by {{ page.author }}{% endif %}
+                </p>
+                {% endif %}
+                {% if page.description %}
+                <p class="article-description">{{ page.description }}</p>
+                {% endif %}
+            </header>
+
+            <div class="article-body">
+                {{ content }}
+            </div>
+
+            {% if page.tags and page.tags.size > 0 %}
+            <footer class="article-footer">
+                <div class="article-tags">
+                    <strong>Tags:</strong>
+                    {% for tag in page.tags %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+            </footer>
+            {% endif %}
+        </article>
+    </div>
+</main>

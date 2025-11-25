@@ -1,0 +1,83 @@
+# Jekyll Configuration for SEMCL.ONE Community Site
+
+# Site settings
+title: SEMCL.ONE Community
+description: Community hub for SEMCL.ONE - Explore guides, presentations, and examples
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "https://community.semcl.one" # The base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Directory structure
+source: .
+destination: ./_site
+layouts_dir: _layouts
+includes_dir: _includes
+data_dir: _data
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .git
+  - .gitignore
+  - .claude
+
+# Include files
+include:
+  - _redirects
+
+# Collections
+collections:
+  examples:
+    output: true
+    permalink: /docs/examples/:name/
+  user_guides:
+    output: true
+    permalink: /docs/user_guides/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "examples"
+    values:
+      layout: "article"
+      show_breadcrumb: true
+      breadcrumb_parent: Examples
+      breadcrumb_parent_url: /docs/examples/
+  - scope:
+      path: ""
+      type: "user_guides"
+    values:
+      layout: "article"
+      show_breadcrumb: true
+      breadcrumb_parent: User Guides
+      breadcrumb_parent_url: /docs/user_guides/
+
+# Site navigation
+navigation:
+  - title: Home
+    url: https://semcl.one/
+  - title: News
+    url: https://semcl.one/
+  - title: Community
+    url: https://community.semcl.one/
+  - title: GitHub
+    url: https://github.com/SemClone/
+    external: true
+  - title: About
+    url: https://semcl.one/
+
+# Site configuration
+logo_url: https://semcl.one/imgs/grayscale_transparent_nobuffer.png
+footer_text: "© 2025 SEMCL.ONE"
+footer_link_text: semcl.one
+footer_link_url: https://semcl.one
