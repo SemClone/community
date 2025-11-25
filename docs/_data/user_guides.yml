@@ -1,7 +1,7 @@
 # User Guides content - Edit this file to add/remove/update user guides
 
 sections:
-  - title: SEMCL.ONE Products
+  - title: User Products
     status: available  # Options: available, development
     items:
       - title: BinarySniffer User Guide
