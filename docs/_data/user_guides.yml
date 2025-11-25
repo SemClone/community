@@ -6,7 +6,7 @@ sections:
     items:
       - title: BinarySniffer User Guide
         url: "https://github.com/SemClone/binarysniffer/blob/main/docs/USER_GUIDE.md"
-        description: A user guide on using AI-driven OSS compliance tooling through the SEMCL.ONE MCP server.
+        description: BinarySniffer is a high-performance CLI tool for detecting open source components in binary files. It can analyze executables, shared libraries, APK files, and other binary formats to identify embedded binary blobs.
 
       - title: CopyCatM for detecting GenAI contamination
         url: "#"
