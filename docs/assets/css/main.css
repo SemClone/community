@@ -30,7 +30,7 @@ body {
     padding: 0 20px;
 }
 
-header {
+body > header {
     background: var(--primary);
     color: var(--white);
     padding: 1.125rem 0; /* 75% of 1.5rem */
@@ -594,7 +594,7 @@ main {
         padding-top: 60px; /* 75% of 80px for mobile */
     }
 
-    header {
+    body > header {
         padding: 0.75rem 0; /* 75% of 1rem for mobile */
     }
 
