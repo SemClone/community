@@ -12,6 +12,9 @@
     {% if page.breadcrumb %}
         <span> / </span>
         <span>{{ page.breadcrumb }}</span>
+    {% elsif page.title %}
+        <span> / </span>
+        <span>{{ page.title }}</span>
     {% endif %}
 </div>
 {% endif %}
