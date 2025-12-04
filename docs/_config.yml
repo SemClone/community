@@ -41,6 +41,9 @@ collections:
   user_guides:
     output: true
     permalink: /user_guides/:name/
+  news:
+    output: true
+    permalink: /news/:year/:month/:day/:title/
 
 # Defaults
 defaults:
@@ -64,13 +67,21 @@ defaults:
       show_breadcrumb: true
       breadcrumb_parent: User Guides
       breadcrumb_parent_url: /user_guides/
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "article"
+      show_breadcrumb: true
+      breadcrumb_parent: News
+      breadcrumb_parent_url: /news/
 
 # Site navigation
 navigation:
   - title: Home
     url: https://semcl.one/
   - title: News
-    url: https://semcl.one/
+    url: /news/
   - title: Community
     url: https://community.semcl.one/
   - title: GitHub
