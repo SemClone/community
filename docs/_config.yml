@@ -41,9 +41,9 @@ collections:
   user_guides:
     output: true
     permalink: /user_guides/:name/
-  news:
+  blog:
     output: true
-    permalink: /news/:year/:month/:day/:title/
+    permalink: /blog/:year/:month/:day/:title/
 
 # Defaults
 defaults:
@@ -69,19 +69,19 @@ defaults:
       breadcrumb_parent_url: /user_guides/
   - scope:
       path: ""
-      type: "news"
+      type: "blog"
     values:
       layout: "article"
       show_breadcrumb: true
-      breadcrumb_parent: News
-      breadcrumb_parent_url: /news/
+      breadcrumb_parent: Blog
+      breadcrumb_parent_url: /blog/
 
 # Site navigation
 navigation:
   - title: Home
     url: https://semcl.one/
-  - title: News
-    url: /news/
+  - title: Blog
+    url: /blog/
   - title: Community
     url: https://community.semcl.one/
   - title: GitHub

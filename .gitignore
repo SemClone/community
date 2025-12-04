@@ -18,6 +18,9 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 Gemfile.lock
+vendor/
+.bundle/
+dev.sh
 
 # Backup files
 *.bak
