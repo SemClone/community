@@ -12,19 +12,15 @@ breadcrumb: News
 {% if sorted_news.size > 0 %}
 <div class="feature-grid">
     <div class="feature-section available">
-        {% for post in sorted_news %}
-        <article class="news-post">
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <div class="post-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-                {% if post.author %}
-                <span class="author">by {{ post.author }}</span>
-                {% endif %}
-            </div>
-            <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-            <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
-        </article>
-        {% endfor %}
+        <h3>Latest Updates</h3>
+        <ul class="feature-list">
+            {% for post in sorted_news %}
+            <li>
+                <strong><a href="{{ post.url | relative_url }}">{{ post.title }}</a></strong>
+                <span>{{ post.date | date: "%B %d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %} – {{ post.excerpt | strip_html | truncatewords: 20 }}</span>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 {% else %}

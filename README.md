@@ -2,7 +2,7 @@
 
 Community documentation and resources for SEMCL.ONE.
 
-## 📁 Structure
+## Structure
 
 ```
 community/
@@ -14,7 +14,7 @@ community/
 └── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Local Development
 
@@ -39,7 +39,7 @@ This is a static site that can be hosted on:
 3. Select the branch (usually `main`) and **`/docs` folder**
 4. Your site will be available at `https://[username].github.io/community/`
 
-## 📝 Adding Content
+## Adding Content
 
 ### User Guides
 
@@ -53,7 +53,7 @@ Add HTML presentation files to the `docs/presentations/` folder (e.g., reveal.js
 
 Add example files to the `docs/examples/` folder.
 
-## 🎨 Design
+## Design
 
 The site follows the SEMCL.ONE design system:
 - Primary color: `#9B0002`
@@ -61,7 +61,7 @@ The site follows the SEMCL.ONE design system:
 - Clean, modular card-based layout
 - Responsive design
 
-## 🔗 Links
+## Links
 
 - [SEMCL.ONE](https://semcl.one)
 - [Status Dashboard](https://status.semcl.one)
