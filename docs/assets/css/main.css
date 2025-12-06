@@ -142,8 +142,7 @@ nav {
 }
 
 .featured-news {
-    padding: 4rem 0;
-    background: var(--light-gray);
+    padding: 2rem 0;
 }
 
 .featured-news h2 {
