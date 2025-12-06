@@ -87,6 +87,38 @@ nav {
     opacity: 0.8;
 }
 
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 .hero {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
@@ -589,6 +621,23 @@ main {
     color: var(--black);
 }
 
+/* Blog post specific styles - override centered headings */
+.article-post h1,
+.article-post h2,
+.article-post h3,
+.article-post h4,
+.article-post h5,
+.article-post h6,
+.posttitle,
+.mainheading h1,
+.mainheading h2 {
+    text-align: left !important;
+}
+
+.section-title h2 {
+    text-align: left !important;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 60px; /* 75% of 80px for mobile */
@@ -614,8 +663,40 @@ main {
         font-size: 1.2rem;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: calc(100vh - 60px);
+        background: var(--primary);
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 0;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 1rem 2rem;
+        width: 100%;
     }
 
     .feature-grid {

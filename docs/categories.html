@@ -1,23 +1,29 @@
 ---
 title: "Categories"
-layout: default
+layout: blog
 permalink: "/categories.html"
 ---
 
 <div class="row listrecent">
-{% for category in site.categories %}
-<div class="section-title col-md-12 mt-4">
-<h2 id="{{ category[0] | replace: " ","-" }}">Category <span class="text-capitalize">{{ category[0] }}</span></h2>
-</div>
-{% assign pages_list = category[1] %}
-{% for post in pages_list %}
-{% if post.title != null %}
-{% if group == null or group == post.group %}
-{% include postbox.html %}
-{% endif %}
-{% endif %}
+{% assign all_categories = "" | split: "" %}
+{% for post in site.blog %}
+  {% for category in post.categories %}
+    {% unless all_categories contains category %}
+      {% assign all_categories = all_categories | push: category %}
+    {% endunless %}
+  {% endfor %}
 {% endfor %}
-{% assign pages_list = nil %}
-{% assign group = nil %}
+
+{% assign sorted_categories = all_categories | sort %}
+
+{% for category in sorted_categories %}
+<div class="section-title col-md-12 mt-4">
+<h2 id="{{ category | replace: " ","-" }}">Category <span class="text-capitalize">{{ category }}</span></h2>
+</div>
+{% for post in site.blog %}
+  {% if post.categories contains category %}
+    {% include postbox.html %}
+  {% endif %}
+{% endfor %}
 {% endfor %}
 </div>

@@ -5,7 +5,12 @@
                 <img src="{{ site.logo_url }}" alt="SEMCL.ONE" class="navbar-logo">
             </a>
         </div>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
             {% for item in site.navigation %}
             <li>
                 <a href="{{ item.url }}"{% if item.external %} target="_blank"{% endif %}>{{ item.title }}</a>
