@@ -10,7 +10,7 @@ We're building the future of Open Source Software compliance—one where automat
 
 ## What is SEMCL.ONE?
 
-SEMCL.ONE is a comprehensive, community-driven Software Composition Analysis (SCA) platform designed to solve one of software development's biggest challenges: **managing open source compliance at scale** fully leveraging on AI.
+SEMCL.ONE is a comprehensive, community-driven Software Composition Analysis (SCA) platform designed to solve one of software development's biggest challenges: **managing open source compliance at scale** fully leveraging AI.
 
 Every organization using open source software faces the same problems:
 - Manually tracking hundreds or thousands of dependencies
@@ -18,7 +18,7 @@ Every organization using open source software faces the same problems:
 - Generating legal notices and SBOMs for distribution
 - Detecting GPL contamination and patent-encumbered code
 - Validating compliance policies across projects
-- Do all of that at scale.
+- Doing all of that at scale
 
 Traditional SCA tools are expensive, closed-source, and often miss AI-generated code transformations. **SEMCL.ONE takes a different approach**: open source tools, open data, shared infrastructure, and GenAI automation.
 
@@ -56,7 +56,7 @@ Our platform is built on 11+ specialized small tools, each solving a specific co
 
 ### Binary & Code Analysis
 
-**BinarySniffer** - Detect hidden OSS components in compiled binaries, finding what traditional scanners miss. Now supports AI artifacts looking for problematic patterns in serialized components to detect waponized models.
+**BinarySniffer** - Detect hidden OSS components in compiled binaries, finding what traditional scanners miss. Now supports AI artifacts looking for problematic patterns in serialized components to detect weaponized models.
 
 **Semantic CopyCat (CopycatM)** - Advanced IP contamination detection using transformation-resistant signatures to catch AI-generated code that copies GPL or patented algorithms—even across language translations and heavy refactoring
 
