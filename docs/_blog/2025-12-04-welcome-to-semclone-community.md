@@ -10,7 +10,7 @@ We're building the future of Open Source Software compliance—one where automat
 
 ## What is SEMCL.ONE?
 
-SEMCL.ONE is a comprehensive, community-driven Software Composition Analysis (SCA) platform designed to solve one of software development's biggest challenges: **managing open source compliance at scale**.
+SEMCL.ONE is a comprehensive, community-driven Software Composition Analysis (SCA) platform designed to solve one of software development's biggest challenges: **managing open source compliance at scale** fully leveraging on AI.
 
 Every organization using open source software faces the same problems:
 - Manually tracking hundreds or thousands of dependencies
@@ -18,6 +18,7 @@ Every organization using open source software faces the same problems:
 - Generating legal notices and SBOMs for distribution
 - Detecting GPL contamination and patent-encumbered code
 - Validating compliance policies across projects
+- Do all of that at scale.
 
 Traditional SCA tools are expensive, closed-source, and often miss AI-generated code transformations. **SEMCL.ONE takes a different approach**: open source tools, open data, shared infrastructure, and GenAI automation.
 
@@ -33,11 +34,11 @@ SEMCL.ONE provides a complete toolchain that automates the entire compliance wor
 4. **Report** - Generate SBOMs, notices, and documentation
 5. **Monitor** - Continuous compliance in CI/CD pipelines
 
-But we go further. With **MCP-SEMCLONE**, we bring compliance directly into your IDE—integrated with AI coding assistants like Cursor, Cline, and others. Ask your AI: *"Is this project safe for commercial distribution?"* Get instant, automated compliance analysis.
+But we go further. With **MCP-SEMCLONE**, we bring compliance directly into your IDE—integrated with AI coding assistants like Kiro, Cursor, Cline, and others. Ask your AI: *"Is this project safe for commercial distribution?"* Get instant, automated compliance analysis.
 
 ## The SEMCL.ONE Toolchain
 
-Our platform is built on 11+ specialized tools, each solving a specific compliance challenge:
+Our platform is built on 11+ specialized small tools, each solving a specific compliance challenge:
 
 ### Package Intelligence
 
@@ -49,13 +50,13 @@ Our platform is built on 11+ specialized tools, each solving a specific complian
 
 ### License & Copyright Detection
 
-**OSSLILI** - High-performance license detector supporting 700+ SPDX identifiers with three-tier detection (Dice-Sørensen similarity, TLSH fuzzy hashing, regex patterns) and comprehensive SBOM generation
+**OSSLILI** - High-performance license detector supporting 700+ SPDX identifiers with three-tier detection (Dice-Sørensen similarity, TLSH fuzzy hashing, regex patterns), copyright extraction, and comprehensive SBOM generation
 
 **PURL2NOTICES** - Generate legal attribution notices and copyright documentation from Package URLs for distribution compliance
 
 ### Binary & Code Analysis
 
-**BinarySniffer** - Detect hidden OSS components in compiled binaries, finding what traditional scanners miss
+**BinarySniffer** - Detect hidden OSS components in compiled binaries, finding what traditional scanners miss. Now supports AI artifacts looking for problematic patterns in serialized components to detect waponized models.
 
 **Semantic CopyCat (CopycatM)** - Advanced IP contamination detection using transformation-resistant signatures to catch AI-generated code that copies GPL or patented algorithms—even across language translations and heavy refactoring
 
@@ -68,8 +69,6 @@ Our platform is built on 11+ specialized tools, each solving a specific complian
 ### Automation & Integration
 
 **MCP-SEMCLONE** - Model Context Protocol server that brings all SEMCL.ONE tools into AI-powered IDEs (Cursor, Cline, VS Code, Kiro). Enables conversational compliance: ask your AI assistant for license analysis, SBOM generation, or policy validation—all automated.
-
-**Status** - Project tracking and progress monitoring across the SEMCL.ONE ecosystem
 
 ## Why Open Source and Open Data?
 
@@ -86,7 +85,7 @@ This approach enables:
 
 ## Automation Through AI Integration
 
-The real breakthrough is **MCP-SEMCLONE**—our Model Context Protocol server that integrates the entire SEMCL.ONE toolchain with AI coding assistants.
+The real breakthrough is **MCP-SEMCLONE**, our Model Context Protocol server that integrates the entire SEMCL.ONE toolchain with AI coding assistants.
 
 **What this means for developers:**
 
@@ -102,9 +101,9 @@ Instead of running separate CLI commands or switching to web dashboards, you sim
 Your AI assistant handles it automatically, using SEMCL.ONE tools behind the scenes. No manual commands. No context switching. Just conversational compliance.
 
 **Supported IDEs:**
+- Kiro IDE
 - Cursor IDE
 - Cline (VS Code extension)
-- Kiro IDE
 - VS Code (with MCP extensions)
 - JetBrains IDEs (with AI plugin)
 
@@ -126,34 +125,23 @@ Your AI assistant handles it automatically, using SEMCL.ONE tools behind the sce
 - Detect IP contamination in AI-generated code
 - Generate legal documentation for product releases
 
-## How We're Different
-
-| Traditional SCA Tools | SEMCL.ONE |
-|----------------------|-----------|
-| Closed source, black box | Open source, transparent |
-| Expensive licenses ($10k-100k+/year) | Free, community-driven |
-| Centralized SaaS | Run anywhere (local, cloud, hybrid) |
-| Miss AI-generated code transformations | Detects AI code mutations with CopycatM |
-| Manual workflows | AI-powered automation via MCP |
-| Vendor lock-in | Open standards (SPDX, PURL, etc.) |
-
 ## Current Status
 
 SEMCL.ONE is **79% complete** with 12 core components operational:
 
-✅ **Production-Ready Tools:**
+**Production-Ready Tools:**
 - OSSLILI (v1.5+) - License detection
 - OSPAC (v1.2+) - Policy engine
 - UPMEX - Package metadata extraction
 - PURL2SRC - Source download URLs
 - PURL2NOTICES - Legal notice generation
-- Semantic CopyCat (v1.8+) - IP contamination detection
 - MCP-SEMCLONE - IDE integration
 
-🚧 **In Development:**
+**In Development:**
+- Semantic CopyCat - IP contamination detection
+- OSSVAL
+- Open Source Compliance Advisory
 - Web management interface
-- RESTful API
-- Batch processing pipeline
 - Compliance dashboard
 
 ## Get Involved
@@ -193,14 +181,6 @@ While SEMCL.ONE doesn't offer commercial services directly, several community me
 
 Reach out to community members for professional services.
 
-## What's Next?
-
-Follow this blog for updates on:
-- **Project Updates** - Latest features and releases
-- **Technical Deep Dives** - How the tools work under the hood
-- **Community Highlights** - Showcasing contributions
-- **Best Practices** - Compliance workflows and patterns
-- **Event Announcements** - Workshops, demos, and meetups
 
 ## Join the Community
 
@@ -214,8 +194,7 @@ Follow this blog for updates on:
 - Compliance is automated, not a burden
 - Open source is used safely and legally
 - AI coding assistants understand licensing
-- Organizations collaborate instead of duplicate efforts
-- Compliance tools are accessible to everyone
+- Compliance tools are simple and accessible to everyone
 
 **Welcome to SEMCL.ONE. Let's build the future of compliance together.**
 
