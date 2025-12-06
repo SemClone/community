@@ -1,7 +1,11 @@
 ---
 title: "Welcome to SEMCL.ONE"
 date: 2025-12-04
-author: SEMCL.ONE Team
+author: community
+featured: true
+image: https://semcl.one/imgs/logo_blanco_apaisado.png
+categories: [Announcements, Community]
+tags: [semclone, sca, compliance, open-source]
 ---
 
 Welcome to the SEMCL.ONE Community!
@@ -16,7 +20,7 @@ Every organization using open source software faces the same problems:
 - Manually tracking hundreds or thousands of dependencies
 - Identifying license obligations and incompatibilities
 - Generating legal notices and SBOMs for distribution
-- Detecting GPL contamination and patent-encumbered code
+- Detecting GPL code and patent-encumbered code
 - Validating compliance policies across projects
 - Doing all of that at scale
 

@@ -71,8 +71,8 @@ defaults:
       path: ""
       type: "blog"
     values:
-      layout: "article"
-      show_breadcrumb: true
+      layout: "post"
+      show_breadcrumb: false
       breadcrumb_parent: Blog
       breadcrumb_parent_url: /blog/
 
@@ -95,3 +95,29 @@ logo_url: https://semcl.one/imgs/logo_blanco_apaisado.png
 footer_text: "© 2025 SEMCL.ONE"
 footer_link_text: semcl.one
 footer_link_url: https://semcl.one
+
+# Authors
+authors:
+  community:
+    name: Copycat Community
+    display_name: Copycat Community
+    gravatar: e17523fd9dfc61bcdd837836bfc8fa21
+    email: community@semcl.one
+    web: https://community.semcl.one
+    twitter: https://twitter.com/semclone
+    linkedin: https://www.linkedin.com/company/semclone/
+    description: "The Copycat Community is building the future of Open Source Software compliance with automation, shared resources, and AI-powered tools to make compliance accessible to everyone."
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Pagination
+paginate: 6
+paginate_path: /blog/page:num/
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"

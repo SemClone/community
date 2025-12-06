@@ -1,8 +1,12 @@
 ---
 title: "Catching Problematic AI-Generated Code That Evades Traditional Scanners"
 date: 2025-12-04
-author: "CopycatM Team"
+author: community
+featured: true
+image: https://semcl.one/imgs/logo_blanco_apaisado.png
 excerpt: "AI transforms GPL-licensed and patented code, making it invisible to traditional scanners. Learn how transformation-resistant signatures detect contamination that evades standard tools—even across language translations and heavy refactoring."
+categories: [AI, Security, Compliance]
+tags: [ai, gpl, copycatm, patent, scanning]
 ---
 
 **The uncomfortable truth about modern software development**: Every time your developers use LLMs/GPTs to write code, they might be introducing problematic code into your proprietary codebase. And you won't know until it's too late.
@@ -37,7 +41,7 @@ Here's the problem: **AI doesn't copy-paste code**. It transforms it:
 
 Traditional software composition analysis (SCA) tools rely on imports, strings, exact matching or simple fuzzy hashing. They're designed to catch copy-paste plagiarism, not AI-mediated code transformation.
 
-**The result?** Tools like Dark Crow detect only 67% of GPL contamination in AI-generated code. Sniff manages 70%. That means **30%+ of your legal exposure stays hidden**, and the more serious risks are in that magical 30%.
+**The result?** Tools like Dark Crow detect only 67% of GPL content in AI-generated code. Sniff manages 70%. That means **30%+ of your legal exposure stays hidden**, and the more serious risks are in that magical 30%.
 
 ## Introducing CopycatM: DNA Testing for Code
 
@@ -110,7 +114,7 @@ Final Similarity =
 Even if an AI transformation defeats one or two detection methods, the others still catch it. The good news? AI models use systematic renaming patterns and preserve algorithmic structure. This makes them *more* detectable than random human rewrites.
 
 
-## Beyond IP Contamination Detection: Track Your Proprietary Algorithms
+## Beyond Contamination Detection: Track Your Proprietary Algorithms
 
 While we've focused on detecting contamination, CopycatM's architecture works for **any** code you want to track:
 

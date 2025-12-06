@@ -6,23 +6,55 @@ show_breadcrumb: true
 breadcrumb: Blog
 ---
 
-<h2><strong>Blog</strong></h2>
-
 {% assign sorted_posts = site.blog | sort: 'date' | reverse %}
 {% if sorted_posts.size > 0 %}
-<div class="feature-grid">
-    <div class="feature-section available">
-        <h3>Latest Updates</h3>
-        <ul class="feature-list">
-            {% for post in sorted_posts %}
-            <li>
-                <strong><a href="{{ post.url | relative_url }}">{{ post.title }}</a></strong>
-                <span>{{ post.date | date: "%B %d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %} – {{ post.excerpt | strip_html | truncatewords: 20 }}</span>
-            </li>
-            {% endfor %}
-        </ul>
+
+<!-- Featured Posts
+================================================== -->
+<section class="featured-posts">
+    <div class="section-title">
+        <h2><span>Featured</span></h2>
     </div>
+    <div class="row">
+
+    {% for post in sorted_posts limit:2 %}
+        {% if post.featured == true %}
+            {% include featuredbox.html %}
+        {% endif %}
+    {% endfor %}
+
+    </div>
+</section>
+
+<!-- All Posts
+================================================== -->
+<section class="recent-posts">
+
+    <div class="section-title">
+        <h2><span>All Stories</span></h2>
+    </div>
+
+    <div class="row listrecent">
+
+        {% for post in sorted_posts %}
+            {% include postbox.html %}
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- Pagination
+================================================== -->
+{% if paginator.total_pages > 1 %}
+<div class="bottompagination">
+<div class="pointerup"><i class="fa fa-caret-up"></i></div>
+<span class="navigation" role="navigation">
+    {% include pagination.html %}
+</span>
 </div>
+{% endif %}
+
 {% else %}
 <div class="empty-state">
     <h3>No Blog Posts Yet</h3>
