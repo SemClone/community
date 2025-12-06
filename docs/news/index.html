@@ -1,10 +1,10 @@
 ---
 layout: blog
-title: Blog - SEMCL.ONE Community
+title: News - SEMCL.ONE Community
 description: Latest updates, announcements, and insights from the SEMCL.ONE community
 ---
 
-{% assign sorted_posts = site.blog | sort: 'date' | reverse %}
+{% assign sorted_posts = site.news | sort: 'date' | reverse %}
 {% if sorted_posts.size > 0 %}
 
 <!-- Featured Posts
@@ -55,7 +55,7 @@ description: Latest updates, announcements, and insights from the SEMCL.ONE comm
 
 {% else %}
 <div class="empty-state">
-    <h3>No Blog Posts Yet</h3>
-    <p>Add blog posts to the _blog folder to get started.</p>
+    <h3>No News Yet</h3>
+    <p>Add news posts to the _news folder to get started.</p>
 </div>
 {% endif %}

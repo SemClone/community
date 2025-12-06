@@ -1,0 +1,46 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% assign news_posts = site.news | sort: 'date' | reverse %}
+    {% for post in news_posts limit:20 %}
+      <item>
+        <title>{{ post.title | xml_escape }}</title>
+        <description>
+          <![CDATA[
+            {% if post.image %}
+            <img src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.url }}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title | xml_escape }}" />
+            <br/>
+            {% endif %}
+            {% if post.excerpt %}
+              {{ post.excerpt | strip_html | truncatewords: 50 | xml_escape }}...
+            {% else %}
+              {{ post.content | strip_html | truncate: 300 | xml_escape }}...
+            {% endif %}
+          ]]>
+        </description>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
+        {% if post.categories %}
+        {% for category in post.categories %}
+        <category>{{ category | xml_escape }}</category>
+        {% endfor %}
+        {% endif %}
+        {% if post.author %}
+        {% assign author = site.authors[post.author] %}
+        <dc:creator>{{ author.display_name | xml_escape }}</dc:creator>
+        {% endif %}
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

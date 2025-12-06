@@ -6,7 +6,7 @@ permalink: "/tags.html"
 
 <div class="row listrecent">
 {% assign all_tags = "" | split: "" %}
-{% for post in site.blog %}
+{% for post in site.news %}
   {% for tag in post.tags %}
     {% unless all_tags contains tag %}
       {% assign all_tags = all_tags | push: tag %}
@@ -20,7 +20,7 @@ permalink: "/tags.html"
 <div class="section-title col-md-12 mt-4">
 <h2 id="{{ tag | replace: " ","-" }}">Tag <span class="text-capitalize">{{ tag }}</span></h2>
 </div>
-{% for post in site.blog %}
+{% for post in site.news %}
   {% if post.tags contains tag %}
     {% include postbox.html %}
   {% endif %}

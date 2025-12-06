@@ -41,9 +41,9 @@ collections:
   user_guides:
     output: true
     permalink: /user_guides/:name/
-  blog:
+  news:
     output: true
-    permalink: /blog/:year/:month/:day/:title/
+    permalink: /news/:year/:month/:day/:title/
 
 # Defaults
 defaults:
@@ -69,19 +69,19 @@ defaults:
       breadcrumb_parent_url: /user_guides/
   - scope:
       path: ""
-      type: "blog"
+      type: "news"
     values:
       layout: "post"
       show_breadcrumb: false
-      breadcrumb_parent: Blog
-      breadcrumb_parent_url: /blog/
+      breadcrumb_parent: News
+      breadcrumb_parent_url: /news/
 
 # Site navigation
 navigation:
   - title: Home
     url: https://semcl.one/
-  - title: Blog
-    url: /blog/
+  - title: News
+    url: /news/
   - title: Community
     url: https://community.semcl.one/
   - title: GitHub
@@ -117,7 +117,14 @@ plugins:
 
 # Pagination
 paginate: 6
-paginate_path: /blog/page:num/
+paginate_path: /news/page:num/
 
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
+
+# Feed configuration
+feed:
+  collections:
+    news:
+      path: "/feed.xml"
+  excerpt_only: false
