@@ -161,7 +161,8 @@ nav {
 }
 
 .featured-news .card-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
@@ -172,6 +173,12 @@ nav {
 
 .featured-news .card-title a:hover {
     color: var(--primary);
+}
+
+.featured-news .card-text {
+    color: var(--gray);
+    font-size: 0.875rem;
+    line-height: 1.5;
 }
 
 .featured-news .maxthumb {
