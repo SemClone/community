@@ -70,18 +70,18 @@ Our platform is built on 11+ specialized small tools, each solving a specific co
 
 **MCP-SEMCLONE** - Model Context Protocol server that brings all SEMCL.ONE tools into AI-powered IDEs (Cursor, Cline, VS Code, Kiro). Enables conversational compliance: ask your AI assistant for license analysis, SBOM generation, or policy validation—all automated.
 
-## Why Open Source and Open Data?
+## Why Open Source and Community-Driven?
 
 We're committed to **transparency and community collaboration**:
 
 - **Open Source Code** - All tools are openly developed, auditable, and improvable by the community
-- **Open Data** - Shared reference databases (license texts, algorithm signatures, vulnerability data) that everyone can contribute to and benefit from
+- **Community-Developed Data** - Shared reference databases built collaboratively—license patterns, algorithm signatures, and vulnerability mappings that the community contributes to and benefits from
 - **Open Standards** - Built on SPDX, PURL, CycloneDX, and other industry standards
 
 This approach enables:
-- **Shared Infrastructure** - Organizations can pool resources instead of each building their own
+- **Community Collaboration** - Contribute discoveries and benefit from collective knowledge
 - **Decentralized Operations** - Run tools locally, in your cloud, or use community instances
-- **Collective Intelligence** - Better detection through shared pattern databases and community contributions
+- **Collective Intelligence** - Improved detection through community-contributed patterns and shared research
 
 ## Automation Through AI Integration
 
@@ -173,13 +173,13 @@ pip install -e .
 
 ### Commercial Services
 
-While SEMCL.ONE doesn't offer commercial services directly, several community members and associated organizations provide:
+Enterprise support and commercial data services are available from ecosystem partners, including:
 - Enterprise support and consulting
+- Business continuity risk advisories
+- Commercial data intelligence
 - Custom policy development
 - Integration services
 - Training and workshops
-
-Reach out to community members for professional services.
 
 
 ## Join the Community
