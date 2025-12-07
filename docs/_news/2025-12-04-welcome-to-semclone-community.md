@@ -3,7 +3,7 @@ title: "Welcome to SEMCL.ONE"
 date: 2025-12-04
 author: community
 featured: true
-image: https://semcl.one/imgs/logo_blanco_apaisado.png
+image: https://community.semcl.one/assets/imgs/logo_news.jpg
 categories: [Announcements, Community]
 tags: [semclone, sca, compliance, open-source]
 ---
