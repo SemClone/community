@@ -3,7 +3,7 @@ title: "Catching Problematic AI-Generated Code That Evades Traditional Scanners"
 date: 2025-12-04
 author: community
 featured: true
-image: https://semcl.one/imgs/logo_blanco_apaisado.png
+image: https://community.semcl.one/assets/imgs/sticker7.jpg
 excerpt: "AI transforms GPL-licensed and patented code, making it invisible to traditional scanners. Learn how transformation-resistant signatures detect contamination that evades standard tools—even across language translations and heavy refactoring."
 categories: [AI, Security, Compliance]
 tags: [ai, gpl, copycatm, patent, scanning]
