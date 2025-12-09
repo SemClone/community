@@ -111,24 +111,6 @@ Your AI assistant handles it automatically, using SEMCL.ONE tools behind the sce
 - VS Code (with MCP extensions)
 - JetBrains IDEs (with AI plugin)
 
-## Real-World Use Cases
-
-### For Individual Developers
-- Check license compatibility before adding dependencies
-- Generate attribution notices for your projects
-- Validate compliance before publishing to npm, PyPI, etc.
-
-### For Teams
-- Automate compliance checks in pull requests
-- Share compliance policies across projects
-- Generate SBOMs for security audits
-
-### For Organizations
-- Enforce consistent compliance policies company-wide
-- Track license obligations across thousands of packages
-- Detect IP contamination in AI-generated code
-- Generate legal documentation for product releases
-
 ## Current Status
 
 SEMCL.ONE is **79% complete** with 12 core components operational:
@@ -145,45 +127,16 @@ SEMCL.ONE is **79% complete** with 12 core components operational:
 - Semantic CopyCat - IP contamination detection
 - OSSVAL
 - Open Source Compliance Advisory
-- Web management interface
-- Compliance dashboard
 
 ## Get Involved
 
 SEMCL.ONE is community-driven. Here's how you can participate:
-
-### Use the Tools
-
-Install from PyPI:
-```bash
-pip install osslili ospac upmex purl2src purl2notices
-pipx install mcp-semclone
-```
-
-Or from source:
-```bash
-git clone https://github.com/SemClone/{tool-name}
-cd {tool-name}
-pip install -e .
-```
-
-### Contribute
 
 - **Report bugs** - Help us improve quality
 - **Suggest features** - Shape the roadmap
 - **Write code** - Fix bugs, add features
 - **Improve docs** - Make tools more accessible
 - **Share patterns** - Contribute to reference databases (license patterns, algorithm signatures)
-
-### Commercial Services
-
-Enterprise support and commercial data services are available from ecosystem partners, including:
-- Enterprise support and consulting
-- Business continuity risk advisories
-- Commercial data intelligence
-- Custom policy development
-- Integration services
-- Training and workshops
 
 
 ## Join the Community
