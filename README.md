@@ -1,67 +1,24 @@
 # SEMCL.ONE Community
 
-Community documentation and resources for SEMCL.ONE.
+Source for [community.semcl.one](https://community.semcl.one) — a Jekyll site with guides, news, and examples for the SEMCL.ONE ecosystem.
 
-## Structure
-
-```
-community/
-├── docs/                  # Website files
-│   ├── index.html        # Main homepage
-│   ├── user_guides/      # User guides and documentation
-│   ├── presentations/    # Slide decks and presentations
-│   └── examples/         # Practical examples and sample code
-└── README.md
-```
-
-## Getting Started
-
-### Local Development
-
-Simply open `docs/index.html` in your browser to view the site locally:
+## Local development
 
 ```bash
-open docs/index.html
+cd docs
+bundle install
+bundle exec jekyll serve
 ```
 
-### Hosting
+The site builds from `docs/` and is published via GitHub Pages.
 
-This is a static site that can be hosted on:
-- GitHub Pages
-- Netlify
-- Vercel
-- Any static hosting service
+## Adding content
 
-#### GitHub Pages Setup
-
-1. Push this repository to GitHub
-2. Go to Settings > Pages
-3. Select the branch (usually `main`) and **`/docs` folder**
-4. Your site will be available at `https://[username].github.io/community/`
-
-## Adding Content
-
-### User Guides
-
-Add HTML files to the `docs/user_guides/` folder. They will automatically be accessible via `user_guides/your-guide.html`.
-
-### Presentations
-
-Add HTML presentation files to the `docs/presentations/` folder (e.g., reveal.js presentations).
-
-### Examples
-
-Add example files to the `docs/examples/` folder.
-
-## Design
-
-The site follows the SEMCL.ONE design system:
-- Primary color: `#9B0002`
-- System fonts
-- Clean, modular card-based layout
-- Responsive design
+- **News posts** — `docs/_news/YYYY-MM-DD-title.md`
+- **User guides** — `docs/_user_guides/`
+- **Examples** — `docs/_examples/`
 
 ## Links
 
 - [SEMCL.ONE](https://semcl.one)
-- [Status Dashboard](https://status.semcl.one)
+- [Status](https://status.semcl.one)
