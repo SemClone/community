@@ -16,6 +16,10 @@ sections:
         url: "https://github.com/SemClone/ospac/blob/main/docs/USER_GUIDE.md"
         description: Declarative, data-driven approach where all compliance logic, rules, and decisions are defined in versionable policy files rather than hardcoded in application logic.
 
+      - title: UPMEX - Universal Package Metadata Extractor
+        url: "https://semclone.github.io/upmex/"
+        description: How to extract standardized metadata, licenses, and dependency information from packages across 13 ecosystems, covering installation, the CLI commands, and the supported package formats.
+
   - title: Technical Architecture
     status: available  # Options: available, development
     items:
@@ -30,3 +34,7 @@ sections:
       - title: OSPAC LLM Prompts for SPDX Licenses
         url: "https://github.com/SemClone/ospac/blob/main/docs/LLM_PROMPTS.md"
         description: AI prompts OSPAC uses to analyze software licenses and extract structured data.
+
+      - title: UPMEX Python API
+        url: "https://semclone.github.io/upmex/api/"
+        description: Reference for embedding UPMEX as a library, including the extractor interfaces, the metadata objects it returns, and how to wire it into your own tooling.
