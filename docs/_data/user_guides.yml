@@ -9,7 +9,7 @@ sections:
         description: BinarySniffer is a high-performance CLI tool for detecting open source components in binary files. It can analyze executables, shared libraries, APK files, and other binary formats to identify embedded binary blobs.
 
       - title: OSSLiLi - License and Copyright extraction
-        url: "https://github.com/SemClone/osslili/blob/main/docs/USAGE.md"
+        url: "https://semclone.github.io/osslili/usage/"
         description: Instructions for using the osslili package to identify licenses and extract copyright information from local source code.
 
       - title: OSPAC (Open Source Policy as Code) policy engine
@@ -24,7 +24,7 @@ sections:
     status: available  # Options: available, development
     items:
       - title: SPDX License Data Management
-        url: "https://github.com/SemClone/osslili/blob/main/docs/SPDX.md"
+        url: "https://semclone.github.io/osslili/spdx/"
         description: This document describes how to update the bundled SPDX license data used by osslili for license detection, which is used by all other products.
 
       - title: BinarySniffer Signature Management
