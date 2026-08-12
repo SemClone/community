@@ -13,7 +13,7 @@ sections:
         description: Instructions for using the osslili package to identify licenses and extract copyright information from local source code.
 
       - title: OSPAC (Open Source Policy as Code) policy engine
-        url: "https://github.com/SemClone/ospac/blob/main/docs/USER_GUIDE.md"
+        url: "https://semclone.github.io/ospac/"
         description: Declarative, data-driven approach where all compliance logic, rules, and decisions are defined in versionable policy files rather than hardcoded in application logic.
 
       - title: UPMEX - Universal Package Metadata Extractor
@@ -31,9 +31,9 @@ sections:
         url: "https://github.com/SemClone/binarysniffer/blob/main/docs/SIGNATURE_MANAGEMENT.md"
         description: How to create, update, and manage signature databases for the BinarySniffer.
 
-      - title: OSPAC LLM Prompts for SPDX Licenses
-        url: "https://github.com/SemClone/ospac/blob/main/docs/LLM_PROMPTS.md"
-        description: AI prompts OSPAC uses to analyze software licenses and extract structured data.
+      - title: OSPAC License Dataset and LLM Enrichment
+        url: "https://semclone.github.io/ospac/dataset/#where-the-llm-fits-and-where-it-does-not"
+        description: How the bundled SPDX license dataset is shaped and regenerated, including where the LLM enrichment step fits in the pipeline and which parts of a license record it is not allowed to decide.
 
       - title: UPMEX Python API
         url: "https://semclone.github.io/upmex/api/"
