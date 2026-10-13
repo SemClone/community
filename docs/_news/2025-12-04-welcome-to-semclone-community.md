@@ -62,8 +62,6 @@ Our platform is built on 11+ specialized small tools, each solving a specific co
 
 **BinarySniffer** - Detect hidden OSS components in compiled binaries, finding what traditional scanners miss. Now supports AI artifacts looking for problematic patterns in serialized components to detect weaponized models.
 
-**Semantic CopyCat (CopycatM)** - Advanced IP contamination detection using transformation-resistant signatures to catch AI-generated code that copies GPL or patented algorithms—even across language translations and heavy refactoring
-
 ### Policy & Risk Management
 
 **OSPAC** - Open Source Policy as Code engine with complete SPDX coverage (712 licenses), compatibility checking, and obligation tracking. Define compliance rules in version-controlled policy files.
@@ -124,7 +122,6 @@ SEMCL.ONE is **79% complete** with 12 core components operational:
 - MCP-SEMCLONE - IDE integration
 
 **In Development:**
-- Semantic CopyCat - IP contamination detection
 - OSSVAL
 - Open Source Compliance Advisory
 

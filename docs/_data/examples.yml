@@ -8,10 +8,6 @@ sections:
         url: "#"
         description: A user guide on using AI-driven OSS compliance tooling through the SEMCL.ONE MCP server.
 
-      - title: CopyCatM for detecting GenAI contamination
-        url: "#"
-        description: CopyCatM represents a new paradigm in plagiarism and IP contamination detection using algorithm-based patterns.
-
   - title: Technical Architecture
     status: available  # Options: available, development
     items:
@@ -19,6 +15,3 @@ sections:
         url: "#"
         description: A user guide on using AI-driven OSS compliance tooling through the SEMCL.ONE MCP server.
 
-      - title: CopyCatM for detecting GenAI contamination
-        url: "#"
-        description: CopyCatM represents a new paradigm in plagiarism and IP contamination detection using algorithm-based patterns.
