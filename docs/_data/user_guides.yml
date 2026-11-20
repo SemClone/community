@@ -4,10 +4,6 @@ sections:
   - title: User Products
     status: available  # Options: available, development
     items:
-      - title: BinarySniffer - Binary Static Analysis
-        url: "https://github.com/SemClone/binarysniffer/blob/main/docs/USER_GUIDE.md"
-        description: BinarySniffer is a high-performance CLI tool for detecting open source components in binary files. It can analyze executables, shared libraries, APK files, and other binary formats to identify embedded binary blobs.
-
       - title: OSSLiLi - License and Copyright extraction
         url: "https://semclone.github.io/osslili/usage/"
         description: Instructions for using the osslili package to identify licenses and extract copyright information from local source code.
@@ -20,16 +16,16 @@ sections:
         url: "https://semclone.github.io/upmex/"
         description: How to extract standardized metadata, licenses, and dependency information from packages across 13 ecosystems, covering installation, the CLI commands, and the supported package formats.
 
+      - title: OSSBOMer - SBOM Quality and Compliance Checks
+        url: "https://semclone.github.io/ossbomer/getting-started.html"
+        description: How to check SPDX and CycloneDX SBOMs against a regulatory profile such as CISA 2026 or the EU Cyber Resilience Act, covering installation, the first run, and how to read the verdicts.
+
   - title: Technical Architecture
     status: available  # Options: available, development
     items:
       - title: SPDX License Data Management
         url: "https://semclone.github.io/osslili/spdx/"
         description: This document describes how to update the bundled SPDX license data used by osslili for license detection, which is used by all other products.
-
-      - title: BinarySniffer Signature Management
-        url: "https://github.com/SemClone/binarysniffer/blob/main/docs/SIGNATURE_MANAGEMENT.md"
-        description: How to create, update, and manage signature databases for the BinarySniffer.
 
       - title: OSPAC License Dataset and LLM Enrichment
         url: "https://semclone.github.io/ospac/dataset/#where-the-llm-fits-and-where-it-does-not"
@@ -38,3 +34,7 @@ sections:
       - title: UPMEX Python API
         url: "https://semclone.github.io/upmex/api/"
         description: Reference for embedding UPMEX as a library, including the extractor interfaces, the metadata objects it returns, and how to wire it into your own tooling.
+
+      - title: OSSBOMer Profile Format
+        url: "https://semclone.github.io/ossbomer/reference/profile-format.html"
+        description: Reference for the profile files OSSBOMer checks an SBOM against, for writing a custom profile or adjusting a built-in one.
