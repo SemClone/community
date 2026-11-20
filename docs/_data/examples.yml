@@ -1,17 +1,3 @@
 # Examples content - Edit this file to add/remove/update examples
 
-sections:
-  - title: MCP Configuration Options
-    status: available  # Options: available, development
-    items:
-      - title: Introduction to MCP-SEMCLONE
-        url: "#"
-        description: A user guide on using AI-driven OSS compliance tooling through the SEMCL.ONE MCP server.
-
-  - title: Technical Architecture
-    status: available  # Options: available, development
-    items:
-      - title: Introduction to MCP-SEMCLONE
-        url: "#"
-        description: A user guide on using AI-driven OSS compliance tooling through the SEMCL.ONE MCP server.
-
+sections: []

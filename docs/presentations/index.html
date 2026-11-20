@@ -8,6 +8,7 @@ breadcrumb: Presentations
 
 <h2><strong>Presentations</strong></h2>
 
+{% if site.data.presentations.sections.size > 0 %}
 <div class="feature-grid">
     {% for section in site.data.presentations.sections %}
     <div class="feature-section {{ section.status }}">
@@ -24,3 +25,10 @@ breadcrumb: Presentations
     </div>
     {% endfor %}
 </div>
+{% else %}
+<div class="empty-state">
+    <div class="emoji">🎞️</div>
+    <h3>No Presentations Yet</h3>
+    <p>Presentations will be listed here as they are published.</p>
+</div>
+{% endif %}
